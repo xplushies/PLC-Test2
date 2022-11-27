@@ -1,4 +1,7 @@
 [Part C Directions]:(10 points) Show whether every rule set in your language conforms to the
-standard of an LL Grammar
+standard of an LL Grammar.
+    The two standards of LL grammar that that (a) Must be pairwise disjoint and (b) There is no left hand recursion. The rules of my language all read from right to left
+    and break apart until it reaches it's terminal state.
 
 [Part D Directions]:(5 points) Make sure it is not ambiguous grammar
+    There are not two distinct parse trees that collide with one another and create overlap in the lexemes because my language uses escape characters to distinguish from     keyworks and variable names.  
