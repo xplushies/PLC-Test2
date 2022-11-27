@@ -17,11 +17,14 @@ clearly define integer token codes for each token required for this language
     must only consist of numbers but may have a decimal (only one!)
 
 -variable names/identifiers:
-
+    must start with a letter
+    range of 6-8 charcters
+    
 -keywords/special characters:
-
 -account for spaces
 
+
+[Answer]:
 Lexemes ----> Tokens
 a. Addition --> +
 b. Subtraction --> -
