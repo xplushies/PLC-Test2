@@ -3,25 +3,6 @@
 clearly define integer token codes for each token required for this language
 • Should have Regular Grammar, Regular Expression, or Finite Automat
 
-Lexemes ----> Tokens
-a. Addition --> +
-b. Subtraction --> -
-c. Multiplication --> *
-d. Division --> /
-e. Module --> %
-f. Less than --> <
-g. Greater than --> >
-h. Less than Equal To --> <=
-i. Greater than Equal To --> >= 
-j. Equal To --> ==
-k. Not Equal To --> !=
-l. Assignment --> =
-m. LParentheses --> (
-n. RParentheses --> )
-
-[Rules Using Regular Grammar]:
-
-
 [Brainstorm Process]:
 -string:
     start and end with ""
@@ -40,4 +21,29 @@ n. RParentheses --> )
 -keywords/special characters:
 
 -account for spaces
+
+Lexemes ----> Tokens
+a. Addition --> +
+b. Subtraction --> -
+c. Multiplication --> *
+d. Division --> /
+e. Module --> %
+f. Less than --> <
+g. Greater than --> >
+h. Less than Equal To --> <=
+i. Greater than Equal To --> >= 
+j. Equal To --> ==
+k. Not Equal To --> !=
+l. Assignment --> =
+m. LParentheses --> (
+n. RParentheses --> )
+
+[Rules Using Regular Expression]:
+Variable Names -->  ( (_)*? [A-Za-z]*? (_)*? ) [,]
+String --> ^(  "\(  )   [A-Za-z]+   [.]*  ( "\), )$
+int_lit --> [0-9]*
+flo_lit --> [0-9]* (.) [0-9]*
+
+
+
 
