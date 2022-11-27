@@ -1,0 +1,4 @@
+[Part C Directions]:(10 points) Show whether every rule set in your language conforms to the
+standard of an LL Grammar
+
+[Part D Directions]:(5 points) Make sure it is not ambiguous grammar

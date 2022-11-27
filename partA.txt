@@ -1,0 +1,43 @@
+[Part A Directions]:
+(15 Points) Define the rules for recognizing all lexemes as their proper token, and
+clearly define integer token codes for each token required for this language
+• Should have Regular Grammar, Regular Expression, or Finite Automat
+
+Lexemes ----> Tokens
+a. Addition --> +
+b. Subtraction --> -
+c. Multiplication --> *
+d. Division --> /
+e. Module --> %
+f. Less than --> <
+g. Greater than --> >
+h. Less than Equal To --> <=
+i. Greater than Equal To --> >= 
+j. Equal To --> ==
+k. Not Equal To --> !=
+l. Assignment --> =
+m. LParentheses --> (
+n. RParentheses --> )
+
+[Rules Using Regular Grammar]:
+
+
+[Brainstorm Process]:
+-string:
+    start and end with ""
+    contained in () allowing it to span for multiple lines
+    separates lines by ending with a ","
+
+-integer:
+    must start with a number
+    only consists of numbers
+
+-float:
+    must only consist of numbers but may have a decimal (only one!)
+
+-variable names/identifiers:
+
+-keywords/special characters:
+
+-account for spaces
+

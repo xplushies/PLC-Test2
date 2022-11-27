@@ -1,0 +1,37 @@
+[Part B Directions]: (15 Points) Define production rules for implementing the mathematical syntax of
+operators and operands, loops, variable declaration, selection statements
+• Enforce a non PEMDAS (BODMAS) order of operation, must have at least
+6 levels of precedence
+• Keywords cannot use the words while, for, do, if, int, short, long
+i. Keywords should be unique, if others share your same words, you
+may lose more points than this problem is worth
+• You must clearly state the structure of your language with production
+rules
+
+
+
+
+- Must be pairwise disjoint
+- No left hand recursion
+
+#i hate this because I'm not creative with names
+#Sen= short for sentence
+#loop = circle -> cir 
+<Sent> --> <ifSen> | <while_Sen> | <as_Sen> | <block_Sen> 
+<block_Sen> --> `{` { <Sen>`;` } `}`
+<if_Sen> -->  `if``(`<bool_Expr>`)` <Sen> [ `else` <Sen> ]
+<while_Cir> -->  `while``(`<bool_expr>`)` <Sen> 
+<as_Sen>  --> `iden` `=` <expr>
+<expr> --> <term> { (`+`|`-`) <term> }
+<term> --> <factor> { (`*`|`\`|`%`) <factor> }
+<factor> --> `iden` | `in_lit` | `flo_lit` | `(` <expr> `)`
+
+
+<bool_expr> --> <band> { `OR` <band> }
+<band> --> <beq> { `AND` <beq> }
+<beq> --> <brel> { (`!=`|`==`) <brel> }
+<brel> --> <expr> { (`<=`|`>=` | `<` | `>`) <expr> }
+<expr> --> <term> { (`+`|`-`) <term> }
+<term> --> <not> { (`*`|`\`|`%`) <bnot> }
+<not> -> [!]<bfactor>
+<factor> --> `iden` | `int_lit` | `float_lit` | `bool_lit` | `(` <bexpr> `)`
