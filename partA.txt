@@ -43,9 +43,10 @@ n. RParentheses --> )
 
 [Rules Using Regular Expression]:
 Variable Names -->  ( (_)*? [A-Za-z]*? (_)*? ) [,]
-String --> ^(  "\(  )   [A-Za-z]+   [.]*  ( "\), )$
+String --> ^(  "\(  )   [A-Za-z]+   [(\\)?.]*  ( "\), )$
 int_lit --> [0-9]*
 flo_lit --> [0-9]* (.) [0-9]*
+keywords --> [.]* == re.search("\s", keywords:list(str))
 
 
 
