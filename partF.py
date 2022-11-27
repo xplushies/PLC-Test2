@@ -144,6 +144,11 @@ class RecursiveAlgo:
             self.expr()
             if self.currentToken == ')':
                 self.getNextToken()
+                self.getNextToken() 
+                if self.currentToken == ',':
+                    self.getNextToken()
+                else:
+                    self.error()
             else:
                 self.error()
         else:
