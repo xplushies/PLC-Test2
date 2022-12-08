@@ -10,28 +10,45 @@ rules
 
 
 
+#poi = stmt
+#loop = cir 
+#when = if
+#con = while
+#digit = int
 
-- Must be pairwise disjoint
-- No left hand recursion
 
-#i hate this because I'm not creative with names
-#Sen= short for sentence
-#loop = circle -> cir 
-<Sent> --> <ifSen> | <while_Sen> | <as_Sen> | <block_Sen> 
-<block_Sen> --> `{` { <Sen>`;` } `}`
-<if_Sen> -->  `if``(`<bool_Expr>`)` <Sen> [ `else` <Sen> ]
-<while_Cir> -->  `while``(`<bool_expr>`)` <Sen> 
-<as_Sen>  --> `iden` `=` <expr>
+
+<start> --> <poi>
+
+<poi> --> <when> ';' | <con> ';' | <as_> ';' | <block> ';'
+
+<block> --> `(` { <poi> `;` } `)`
+
+<when> -->  `when``(`<bool_Expr>`)` <poi> [ `else` <poi> ]
+
+<con> -->  `con``(`<bool_expr>`)` <poi> 
+
+<as_>  --> `iden` `=` <expr>
+
+
+
 <expr> --> <term> { (`+`|`-`) <term> }
-<term> --> <factor> { (`*`|`\`|`%`) <factor> }
-<factor> --> `iden` | `in_lit` | `flo_lit` | `(` <expr> `)`
+
+<term> --> <factor> { (`*`|`\`|`%`) <factor> | <factor> --> `iden` | `int_lit` | `bool_lit` | `(` <bexpr> `)`}
+
+<factor> --> `iden` | `int_lit` | `bool_lit` | `(` <bexpr> `)`
 
 
 <bool_expr> --> <band> { `OR` <band> }
+
 <band> --> <beq> { `AND` <beq> }
+
 <beq> --> <brel> { (`!=`|`==`) <brel> }
+
 <brel> --> <expr> { (`<=`|`>=` | `<` | `>`) <expr> }
+
 <expr> --> <term> { (`+`|`-`) <term> }
+
 <term> --> <not> { (`*`|`\`|`%`) <bnot> }
+
 <not> -> [!]<bfactor>
-<factor> --> `iden` | `int_lit` | `float_lit` | `bool_lit` | `(` <bexpr> `)`
