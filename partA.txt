@@ -1,52 +1,40 @@
-[Part A Directions]:
-(15 Points) Define the rules for recognizing all lexemes as their proper token, and
-clearly define integer token codes for each token required for this language
-• Should have Regular Grammar, Regular Expression, or Finite Automat
-
-[Brainstorm Process]:
--string:
-    start and end with ""
-    contained in () allowing it to span for multiple lines
-    separates lines by ending with a ","
-
--integer:
-    must start with a number
-    only consists of numbers
-
--float:
-    must only consist of numbers but may have a decimal (only one!)
-
--variable names/identifiers:
-    must start with a letter
-    range of 6-8 charcters
-    
--keywords/special characters:
--account for spaces
-
-
-[Answer]:
 Lexemes ----> Tokens
-a. Addition --> +
-b. Subtraction --> -
-c. Multiplication --> *
-d. Division --> /
-e. Module --> %
-f. Less than --> <
-g. Greater than --> >
-h. Less than Equal To --> <=
-i. Greater than Equal To --> >= 
-j. Equal To --> ==
-k. Not Equal To --> !=
-l. Assignment --> =
-m. LParentheses --> (
-n. RParentheses --> )
+Addition --> + 
+Subtraction --> -
+Multiplication --> *
+Division --> /
+Module --> %
+LessThan --> <
+GreaterThan --> >
+LessThanEqualTo --> <=
+GreaterThanEqualTo --> >= 
+EqualTo --> ==
+NotEqualTo --> !=
+Assignment --> =
+LParentheses --> (
+RParentheses --> )
+LCurlyBracket --> {
+RCurlyBracket --> }
+LSquareBracket --> [
+RSquareBracket --> ]
+1_btye_memory --> @
+2_btyes_memory --> #
+3_btyes_memory --> $
+4_btyes_memory --> ^
+Semi-Colen --> ;
+Colen --> :
+And --> &
+Or --> |
+EscapeCharacter --> \
+Comma --> ,
+Space --> 
+else --> else
 
 [Rules Using Regular Expression]:
-Variable Names -->  ( (_)*? [A-Za-z]*? (_)*? ) [,]
-String --> ^(  "\(  )   [A-Za-z]+   [(\\)?.]*  ( "\), )$
-int_lit --> [0-9]*
-flo_lit --> [0-9]* (.) [0-9]*
-keywords --> [.]* == re.search("\s", keywords:list(str))
+Variable Names --> \b\w{6,8}\b
+
+int_lit --> \d)+[@#$^]*
+
 
 
 
