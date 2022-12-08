@@ -1,0 +1,13 @@
+when ( 2 < 3 )
+  y_t = 'i ;
+else
+  b7dfg = 4 ;
+ 
+during  ( 5 == 7 ) 
+  applebottomjeans = 45 ;
+  
+when ( 5 == 5 )
+  t@6g = 5 * 4 ;
+  i = 6 ;
+else
+  t = 0 ;
