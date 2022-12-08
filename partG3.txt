@@ -1,15 +1,14 @@
 
-when ( angels = 3 )
-  before = 456980 ;
+when ( xasdjk = 456 )
+  yasdgfd =  645#  ;
 else
-  before = 967456 ;
+  basddfd =  4345  ;
  
-during ( 5 == 7 ) 
-  pearsand = 567 ;
-  banana = 765 ;
+during ( 5 == 745667^ ) 
+  apples = 567@ ;
   
-when ( 2 == 2 )
-  toader = 3 * 7 ;
-  donuts = 632 ;
-else
-  toader  = 0 ;
+when ( 5 == 5 )
+  tsdfsdf = 5 * 4 ;
+  isdfdsd = 6 ;
+else 
+  tsdffs = 0 ;
