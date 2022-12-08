@@ -1,16 +1,15 @@
-# not wrong file 1
 
-
-when (x = 4)
-  y = 'i',
+when ( angels = 3 )
+  before = 456980 ;
 else
-  b = '4',
+  before = 967456 ;
  
-during (5 == 7) 
-  apple = 567,
+during ( 5 == 7 ) 
+  pearsand = 567 ;
+  banana = 765 ;
   
-when (5 == 5)
-  t = 5 * 4,
-  i = 6,
+when ( 2 == 2 )
+  toader = 3 * 7 ;
+  donuts = 632 ;
 else
-  t = 0,
+  toader  = 0 ;
